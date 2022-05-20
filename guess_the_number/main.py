@@ -1,4 +1,5 @@
 import random
+import sys
 
 def guess(x):
     random_number = random.randint(1, x)
@@ -27,5 +28,17 @@ def computer_guess(x):
             low = guess + 1
     
     print(f'Yay, the computer guessed your number {guess}, correctly!')
- 
-computer_guess(10)
+
+def main():
+    game = ''
+    game = input('Do you want to play number_guess (1) or computer_guess (2)? ')
+    if game == '1':
+        guess(10)
+        quit()
+    elif game == '2':
+        computer_guess(10)
+        quit()
+    print(f'Sorry, I didn\'t recognise your choice ({game}), try again.')
+
+if __name__ == '__main__':
+    sys.exit(main())
