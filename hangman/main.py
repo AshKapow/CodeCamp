@@ -2,12 +2,14 @@ import random
 import string
 from words import words
 
+
 def get_valid_word(words):
     word = random.choice(words)
     while '-' in word or ' ' in word:
         word = random.choice(words)
 
     return(word).upper()
+
 
 def hangman():
     word = get_valid_word(words)
@@ -18,8 +20,10 @@ def hangman():
     lives = 6
 
     while len(word_letters) > 0 and lives > 0:
-        print('You have', lives, 'lives left and you have used these letters: ', ' '.join(used_letters))
-        word_list = [letter if letter in used_letters else '-' for letter in word]
+        print('You have', lives, 'lives left and you have used these letters: ',
+              ' '.join(used_letters))
+        word_list = [
+            letter if letter in used_letters else '-' for letter in word]
         print('Current word: ', ' '.join(word_list))
 
         user_letter = input('Guess a letter: ').upper()
@@ -33,15 +37,16 @@ def hangman():
                 print("Letter is not in word.")
 
         elif user_letter in used_letters:
-            print(f'You have already used the character {user_letter}. Please try again.')
+            print(
+                f'You have already used the character {user_letter}. Please try again.')
 
         else:
             print(f'Invalid character. Please try again.')
-
 
     if lives == 0:
         print('You died, sorry. The word was', word, '.')
     else:
         print('CONGRATULATIONS! You guessed the word', word, '!!')
+
 
 hangman()
