@@ -13,8 +13,7 @@ def madlib():
     noun_plural_3 = input("Noun (plural): ")
     sound_important = input("Name of something that sounds important: ")
 
-
-    madlib=f"{number} seconds. That’s how long we’re required to {verb} on our metal circles before \
+    madlib = f"{number} seconds. That’s how long we’re required to {verb} on our metal circles before \
 the sound of a {noun} releases us. Step off before the {number} seconds is up, and {noun_plural} blow your \
 legs off. {number} seconds to take in the ring of tributes all equidistant from the {sound_important}, a giant \
 {adj} {noun2} shaped like a {noun3} with a curved tail, the mouth of which is at least twenty feet \
@@ -26,6 +25,7 @@ that would protect from almost any sort of weather. If I had the guts to go in a
 the other twenty-three tributes. Which I have been instructed not to do."
 
     print(madlib)
+
 
 if __name__ == '__main__':
     madlib()

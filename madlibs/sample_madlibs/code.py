@@ -19,5 +19,5 @@ lets you take control of your {noun1}. You can create your own personal {noun_pl
 from developing {adj3} software to analyzing data and making predictions about the {noun2}. You can \
 maybe even recreate Jarvis and make him extra {adj4}. I hope you'll start your {adj5} journey by \
 coding with Kylie :)"
-    
+
     print(madlib)

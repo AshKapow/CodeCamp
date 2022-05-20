@@ -1,6 +1,7 @@
 import random
 import sys
 
+
 def guess(x):
     random_number = random.randint(1, x)
     guess = 0
@@ -10,7 +11,9 @@ def guess(x):
             print('Sorry guess again. Too low.')
         elif guess > random_number:
             print('Sorry guess again. Too high.')
-    print(f'Yay, congrats. You have guessed the number {random_number} correctly!!')
+    print(
+        f'Yay, congrats. You have guessed the number {random_number} correctly!!')
+
 
 def computer_guess(x):
     low = 1
@@ -21,17 +24,20 @@ def computer_guess(x):
             guess = random.randint(low, high)
         else:
             guess = low
-        feedback = input(f'Is {guess} too high (H), too low (L), or correct (C)?? ').lower()
+        feedback = input(
+            f'Is {guess} too high (H), too low (L), or correct (C)?? ').lower()
         if feedback == 'h':
             high = guess - 1
         elif feedback == 'l':
             low = guess + 1
-    
+
     print(f'Yay, the computer guessed your number {guess}, correctly!')
+
 
 def main():
     game = ''
-    game = input('Do you want to play number_guess (1) or computer_guess (2)? ')
+    game = input(
+        'Do you want to play number_guess (1) or computer_guess (2)? ')
     if game == '1':
         guess(10)
         quit()
@@ -39,6 +45,7 @@ def main():
         computer_guess(10)
         quit()
     print(f'Sorry, I didn\'t recognise your choice ({game}), try again.')
+
 
 if __name__ == '__main__':
     sys.exit(main())
